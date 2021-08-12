@@ -21,8 +21,7 @@ app.use("/",dashboard);
 app.use('/students',students);
 
 const port = process.env.PORT || 5000;
-
-mongoose.connect(`mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@cluster0.rbleb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
+mongoose.connect(`mongodb+srv://Prateek:${process.env.PASSWORD}@cluster0.rbleb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
 { useNewUrlParser: true, useUnifiedTopology: true,useFindAndModify:false})
 .then(()=>app.listen(port,()=>console.log(`Server running on Port: ${port}`)))
 .catch((error)=>console.log(error));
