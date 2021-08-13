@@ -49,7 +49,7 @@ function CreateCollege(){
     return(
         <Card>
         <div className={classes.header}>
-            <h5 style={{paddingTop: 20}}>Add Student</h5>
+            <h5 style={{paddingTop: 20}}>Add College</h5>
             <TextField id="filled-basic" label="Name" variant="filled" onChange={(e)=>{
                 setValues({...values,name:e.target.value})} }/> <br/><br/>
             <TextField id="filled-basic" label="Year Founded" variant="filled" onChange={(e)=>{

@@ -1,0 +1,12 @@
+0:
+college_id: 1
+name: "Prateek Chaturvedi"
+skills: Array(1)
+0: "NodeJs, ReactJs"
+length: 1
+[[Prototype]]: Array(0)
+year_of_batch: 2018
+__v: 0
+_id: "61155d0f38f5967310ef773b"
+[[Prototype]]: Object
+

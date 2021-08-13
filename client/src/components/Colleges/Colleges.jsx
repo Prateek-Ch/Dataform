@@ -45,6 +45,8 @@ function Colleges() {
 
   const [collegesList,setCollegesList] = useState([])
 
+  const [searchTerm,recievedSearchTerm] = useState("");
+
   useEffect(()=>{
     axios.get('http://localhost:5000/colleges').then((allColleges)=>{
       const data = allColleges.data;
@@ -54,10 +56,14 @@ function Colleges() {
     }).catch(error => console.log(error));
   },[]);
 
+  const handleCallback = (childData)=>{
+    recievedSearchTerm(childData);
+  }
+
   return (
     <div className={classes.header}>
     
-    <SearchBar />
+    <SearchBar parentCallback = {handleCallback}/>
 
     <h3>Colleges List</h3>
     <TableContainer component={Paper}>
@@ -74,7 +80,18 @@ function Colleges() {
           </StyledTableRow>
         </TableHead>
         <TableBody>
-        {collegesList.map((college,key) => (
+        {collegesList.filter(val=>{
+          if(searchTerm===""){
+            return val;
+          }else if(val.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            val.city.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            val.country.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            val.no_of_students>=searchTerm ||
+            val.courses[0].toLowerCase().includes(searchTerm.toLowerCase())
+          ){
+              return val;
+          }
+        }).map((college,key) => (
             <StyledTableRow key={key}>
               <StyledTableCell component="th" scope="row">{college.name}</StyledTableCell>
               <StyledTableCell align="right">{college.year_founded}</StyledTableCell>
