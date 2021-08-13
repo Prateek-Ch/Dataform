@@ -47,20 +47,18 @@ function Students() {
 
   const [searchTerm,recievedSearchTerm] = useState("");
   
-  const handleCallback = (childData)=>{
-    recievedSearchTerm(childData);
-  }
-
+  
   useEffect(()=>{
     axios.get('http://localhost:5000/students').then((allStudents)=>{
       const data = allStudents.data;
       setStudentsList(data);
-      console.log(allStudents.data);
-      console.log(studentsList);
     }).catch(error => console.log(error));
   },[]);
 
-  console.log(searchTerm);
+  const handleCallback = (childData)=>{
+    recievedSearchTerm(childData);
+  }
+
 
   return (
     <div className={classes.header}>
