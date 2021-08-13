@@ -36,7 +36,7 @@ const useStyles = makeStyles({
     minWidth: 650,
   },
   header:{
-    marginTop: 100,
+    marginTop: 40,
   }
 });
 

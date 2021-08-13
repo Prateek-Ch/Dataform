@@ -12,11 +12,8 @@ import Header from './components/Utils/Header';
 function App() {
   return (
     <div className="App">
-      <Container >
          <Header />
-      </Container>
-
-      <Grow in>
+            <Grow in>
         <Container>
           <Switch>
             <Route path='/' exact>

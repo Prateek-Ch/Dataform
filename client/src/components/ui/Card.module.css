@@ -4,5 +4,47 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     width: 30%;
     padding: 0% 5%;
-    margin-top: 120px;
+    margin-top: 60px;
   }
+
+
+/* Extra small devices(phone,600px and down) */
+@media only screen and (min-width: 451px) {
+    .card {
+        margin-left: 75%;
+
+}       
+}
+/* Small devices(portrait tablets and large phones,600px and down) */
+@media only screen and (min-width: 600px) {
+    .card {
+        margin-left: 60%;
+}  
+}
+
+/* Medium devices(landsccape tablets,768px and up) */
+@media only screen and (min-width: 768px) {
+    .card {
+        margin-left: 50%;
+}  
+}
+
+/* Large devices(laptops desktops,992px and up) */
+@media only screen and (min-width: 1160px) {
+    .card {
+        margin-left: 29%;
+}  
+}
+
+/* Large devices(laptops desktops,992px and up) */
+@media only screen and (min-width: 1500px) {
+    .card {
+        margin-left: 25%;
+}  
+}
+/* Large devices(laptops desktops,992px and up) */
+@media only screen and (min-width: 1629px) {
+    .card {
+        margin-left: 22%;
+}  
+}

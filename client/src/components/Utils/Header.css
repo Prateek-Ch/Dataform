@@ -1,0 +1,13 @@
+.navbar{
+    width: 100%;
+    background-color:#e3f2fd;
+}
+.navbar-toggler{
+    border: none;
+}
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
