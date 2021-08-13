@@ -80,8 +80,8 @@ function Students() {
           if(searchTerm===""){
             return val;
           }else if(val.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            val.year_of_batch==searchTerm ||
-            val.college_id==searchTerm ||
+            val.year_of_batch===searchTerm ||
+            val.college_id===searchTerm ||
             val.skills[0].toLowerCase().includes(searchTerm.toLowerCase())
           ){
               return val;

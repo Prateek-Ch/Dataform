@@ -2,7 +2,7 @@ import React from 'react';
 import {Container, Grow} from '@material-ui/core';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Switch, Route } from 'react-router-dom';
-
+import Dashboard from './components/Dashboard/Dashboard';
 import Students from './components/Students/Students';
 import Colleges from './components/Colleges/Colleges';
 import CreateCollege from './components/Create/CreateCollege';
@@ -20,7 +20,7 @@ function App() {
         <Container>
           <Switch>
             <Route path='/' exact>
-              <Students />
+              <Dashboard />
             </Route>
 
             <Route path='/students' exact>
