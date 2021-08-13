@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     button:{
-        marginLeft:50,
+        marginLeft:55,
         marginTop: 20,
         marginBottom: 20,
     }
@@ -44,16 +44,16 @@ function CreateStudent(){
         <Card>
         <div className={classes.header}>
             <h5 style={{paddingTop: 20}}>Add Student</h5>
-            <TextField id="filled-basic" label="Name" variant="filled" onChange={(e)=>{
+            <TextField id="standard-basic" label="Name" onChange={(e)=>{
                 setValues({...values,name:e.target.value})} }/> <br/><br/>
-            <TextField id="filled-basic" label="Year of Batch" variant="filled" onChange={(e)=>{
+            <TextField id="standard-basic" label="Year of Batch" onChange={(e)=>{
                 setValues({...values,year_of_batch:e.target.value})} }/> <br/><br/>
-            <TextField id="filled-basic" label="College Id" variant="filled" onChange={(e)=>{
+            <TextField id="standard-basic" label="College Id" onChange={(e)=>{
                 setValues({...values,college_id:e.target.value})} }/> <br/><br/>
-            <TextField id="filled-basic" label="Skills" variant="filled" onChange={(e)=>{
+            <TextField id="standard-basic" label="Skills" onChange={(e)=>{
                 setValues({...values,skills:e.target.value})} }/> <br/><br/>
     
-            <Button variant="outlined" className={classes.button} onClick={createStudent}>Submit</Button>
+            <Button variant="outlined" color="secondary" className={classes.button} onClick={createStudent}>Submit</Button>
         </div>
         </Card>
     );
