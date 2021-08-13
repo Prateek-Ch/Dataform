@@ -85,6 +85,7 @@ function Colleges() {
             return val;
           }else if(val.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             val.city.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            val.state.toLowerCase().includes(searchTerm.toLowerCase()) ||
             val.country.toLowerCase().includes(searchTerm.toLowerCase()) ||
             val.no_of_students>=searchTerm ||
             val.courses[0].toLowerCase().includes(searchTerm.toLowerCase())
