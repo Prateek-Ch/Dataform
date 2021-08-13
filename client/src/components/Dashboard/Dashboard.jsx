@@ -2,20 +2,21 @@ import React from 'react';
 import classes from './Dashboard.module.css';
 import {Grid, Container} from '@material-ui/core';
 
-import CollegesGraph from '../Colleges/CollegesGraph';
+import CollegePieChart from '../Colleges/CollegePieChart';
+import CollegeBarChart from '../Colleges/CollegeBarChart';
   
 
 function Dashboard(){
       return(
         <div className={classes.header}>
-            <h3>Dashboard</h3>
+            <h4 style={{marginBottom: 30}}>Visualise</h4>
             <Container>
                 <Grid container justify="space-between" alignItems="stretch">
                     <Grid item xs={12} sm = {12} md={5}> 
-                        <CollegesGraph />
+                        <CollegePieChart />
                     </Grid>
                     <Grid item xs={12} sm = {12} md={5}>
-                        <CollegesGraph />
+                        <CollegeBarChart />
                     </Grid>
                 </Grid>
             </Container>

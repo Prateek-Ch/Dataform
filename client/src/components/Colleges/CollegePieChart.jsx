@@ -5,7 +5,7 @@ import classes from './CollegesGraph.module.css';
 import { Pie } from 'react-chartjs-2';
   
 
-function CollegesGraph(){
+function CollegePieChart(){
     const [collegesList, setCollegesList] = useState([]);
 
   useEffect(()=>{
@@ -33,7 +33,7 @@ const data = {
     
     datasets: [
       {
-        label: '# of Votes',
+        label: 'Colleges in various Cities',
         data: values,
         backgroundColor: [
           'rgba(255, 99, 132, 0.2)',
@@ -58,9 +58,10 @@ const data = {
 
     return(
         <div className={classes.graph}>
+          <h6>Number of Colleges in Various Cities</h6>
             <Pie data={data}  height = {300} width = {300} options={{ maintainAspectRatio: false, responsive: true }}/>
         </div>
     );
 }
 
-export default CollegesGraph;
+export default CollegePieChart;
