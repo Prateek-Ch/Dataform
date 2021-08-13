@@ -2,37 +2,73 @@
     background-color: white;
     border-radius: 6px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-    width: 30%;
-    padding: 0% 5%;
     margin-top: 60px;
   }
 
 
 /* Extra small devices(phone,600px and down) */
+@media only screen and (min-width: 200px) {
+    .card {
+        margin-left: 5%;
+        width: 90%;
+        padding: 0% 14%;
+
+}       
+}
+
+/* Extra small devices(phone,600px and down) */
 @media only screen and (min-width: 451px) {
     .card {
-        margin-left: 75%;
+        margin-left: 7%;
+        width: 85%;
+        padding: 0% 12%;
 
 }       
 }
 /* Small devices(portrait tablets and large phones,600px and down) */
 @media only screen and (min-width: 600px) {
     .card {
-        margin-left: 60%;
+        margin-left: 18%;
+        width: 67%;
+        padding: 0% 14%;
 }  
 }
 
 /* Medium devices(landsccape tablets,768px and up) */
 @media only screen and (min-width: 768px) {
     .card {
-        margin-left: 50%;
+        margin-left: 23%;
+        width: 52%;
+        padding: 0% 14%; 
 }  
 }
 
+/* Medium devices(landsccape tablets,768px and up) */
+@media only screen and (min-width: 820px) {
+    .card {
+        margin-left: 25%;
+        width: 48%;
+        padding: 0% 11%; 
+}  
+}
+
+/* Medium devices(landsccape tablets,768px and up) */
+@media only screen and (min-width: 970px) {
+    .card {
+        margin-left: 27%;
+        width: 40%;
+        padding: 0% 9%; 
+}  
+}
+
+
+
 /* Large devices(laptops desktops,992px and up) */
-@media only screen and (min-width: 1160px) {
+@media only screen and (min-width: 1140px) {
     .card {
         margin-left: 29%;
+        width: 35%;
+        padding: 0% 8%;
 }  
 }
 
@@ -40,11 +76,15 @@
 @media only screen and (min-width: 1500px) {
     .card {
         margin-left: 25%;
+        width: 30%;
+        padding: 0% 5%;
 }  
 }
 /* Large devices(laptops desktops,992px and up) */
 @media only screen and (min-width: 1629px) {
     .card {
         margin-left: 22%;
+        width: 30%;
+        padding: 0% 5%;
 }  
 }
