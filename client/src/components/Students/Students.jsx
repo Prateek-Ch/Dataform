@@ -51,7 +51,6 @@ function Students() {
   useEffect(()=>{
     axios.get('http://localhost:5000/students').then((allStudents)=>{
       const data = allStudents.data;
-      console.log(data);
       setStudentsList(data);
     }).catch(error => console.log(error));
   },[]);

@@ -26,8 +26,6 @@ function CollegePieChart(){
 }
 var values = Object.keys(obj).map(function (key) { return obj[key]; });
 
-console.log(obj);
-
 const data = {
     labels: ["Andhra Pradesh","Arunachal Pradesh","Assam","Bihar","Chandigarh","Chhattisgarh","Delhi","Goa","Gujarat","Haryana","Himachal Pradesh","Jammu and Kashmir","Jharkhand","Karnataka","Kerala","Madhya Pradesh","Maharashtra","Manipur","Massachusetts","Meghalaya", "Nagaland","Odisha","Puducherry","Punjab","Rajasthan","Tamil Nadu","Telangana","Tripura", "Uttar Pradesh","Uttarakhand", "West Bengal"],
     

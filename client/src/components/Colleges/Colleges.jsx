@@ -51,8 +51,6 @@ function Colleges() {
     axios.get('http://localhost:5000/colleges').then((allColleges)=>{
       const data = allColleges.data;
       setCollegesList(data);
-      console.log(allColleges.data);
-      console.log(collegesList);
     }).catch(error => console.log(error));
   },[]);
 

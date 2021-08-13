@@ -28,9 +28,7 @@ function CollegeBarChart(){
         else values[4]+=1;
     }
 
-console.log(values);
-
-const data = {
+  const data = {
     labels: ["Less than 500","500-1000","1000-5000","5000-10000","Greater than 10000"],
     
     datasets: [
