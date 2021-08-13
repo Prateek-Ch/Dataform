@@ -1,0 +1,19 @@
+.search{
+    color: black;
+    height: 35px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 504px;
+    background-color: white; 
+    margin-bottom: 30px;
+}
+.search:focus{
+    outline: none;
+}
+.btn_search{
+    border-style: none;
+    background-color: white;
+  }
+    
+  

@@ -10,6 +10,8 @@ import Paper from '@material-ui/core/Paper';
 
 import axios from 'axios';
 
+import SearchBar from '../Utils/SearchBar';
+
 const StyledTableCell = withStyles((theme) => ({
     head: {
       backgroundColor: theme.palette.common.black,
@@ -54,6 +56,9 @@ function Colleges() {
 
   return (
     <div className={classes.header}>
+    
+    <SearchBar />
+
     <h3>Colleges List</h3>
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="Student Table">

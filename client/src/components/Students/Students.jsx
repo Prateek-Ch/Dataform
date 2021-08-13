@@ -10,6 +10,8 @@ import Paper from '@material-ui/core/Paper';
 
 import axios from 'axios';
 
+import SearchBar from '../Utils/SearchBar';
+
 const StyledTableCell = withStyles((theme) => ({
     head: {
       backgroundColor: theme.palette.common.black,
@@ -43,6 +45,12 @@ function Students() {
 
   const [studentsList,setStudentsList] = useState([])
 
+  const [searchTerm,recievedSearchTerm] = useState("");
+  
+  const handleCallback = (childData)=>{
+    recievedSearchTerm(childData);
+  }
+
   useEffect(()=>{
     axios.get('http://localhost:5000/students').then((allStudents)=>{
       const data = allStudents.data;
@@ -52,8 +60,11 @@ function Students() {
     }).catch(error => console.log(error));
   },[]);
 
+  console.log(searchTerm);
+
   return (
     <div className={classes.header}>
+      <SearchBar parentCallback = {handleCallback}/>
     <h3>Student List</h3>
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="Student Table">
@@ -66,7 +77,16 @@ function Students() {
           </StyledTableRow>
         </TableHead>
         <TableBody>
-        {studentsList.map((student,key) => (
+        {studentsList.filter(val=>{
+          if(searchTerm===""){
+            return val;
+          }else if(val.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            val.year_of_batch==searchTerm ||
+            val.college_id==searchTerm
+          ){
+              return val;
+          }
+        }).map((student,key) => (
             <StyledTableRow key={key}>
               <StyledTableCell component="th" scope="row">{student.name}</StyledTableCell>
               <StyledTableCell align="right">{student.year_of_batch}</StyledTableCell>
